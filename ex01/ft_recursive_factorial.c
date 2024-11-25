@@ -1,39 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: giamrugg <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/25 18:11:54 by giamrugg          #+#    #+#             */
-/*   Updated: 2024/11/25 19:04:13 by giamrugg         ###   ########.fr       */
+/*   Created: 2024/11/25 18:36:01 by giamrugg          #+#    #+#             */
+/*   Updated: 2024/11/25 19:05:10 by giamrugg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stdio.h>
 
-int	ft_iterative_factorial(int nb)
+int	ft_recursive_factorial(int nb)
 {
-	int	result;
-	int	i;
-
-	i = 1;
-	result = 1;
 	if (nb < 0)
 	{
 		return (0);
 	}
-	while (i && i <= nb)
+	if (nb == 0 || nb == 1)
 	{
-		result *= i;
-		i++;
+		return(1);
 	}
-	return (result);
+	return (nb * ft_recursive_factorial(nb - 1));
 }
 /*
-int	main (void)
+int	main(void)
 {
-	int	nb = 6;
-	int	fact = ft_iterative_factorial(nb);
-	printf("Il fattoriale di %d è %d\n", nb, fact);
+	int	num = 5;
+	int	fact = ft_recursive_factorial(num);
+	printf("Il fattoriale di %d è %d\n", num, fact);
 	return (0);
 }*/
