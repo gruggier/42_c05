@@ -1,34 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: giamrugg <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/25 18:36:01 by giamrugg          #+#    #+#             */
-/*   Updated: 2024/11/26 12:13:03 by giamrugg         ###   ########.fr       */
+/*   Created: 2024/11/26 12:15:18 by giamrugg          #+#    #+#             */
+/*   Updated: 2024/11/26 12:55:49 by giamrugg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <unistd.h>
 
-int	ft_recursive_factorial(int nb)
+int	ft_iterative_power(int nb, int power)
 {
-	if (nb < 0)
+	int	a;
+	int	b;
+
+	a = 1;
+	b = 0;
+	if (power < 0)
 	{
 		return (0);
 	}
-	if (nb == 0 || nb == 1)
+	if (nb == 0 && power == 0)
 	{
-		return(1);
+		return (1);
 	}
-	return (nb * ft_recursive_factorial(nb - 1));
+	for (b = 0; b < power; b++)
+	{
+		a *= nb;
+	}
+	return (a);
 }
 /*
 int	main(void)
 {
-	int	num = 5;
-	int	fact = ft_recursive_factorial(num);
-	printf("Il fattoriale di %d è %d\n", num, fact);
+	printf("2^3 = %d\n", ft_iterative_power(2, 3));
 	return (0);
 }*/
