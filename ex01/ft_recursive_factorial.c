@@ -6,7 +6,7 @@
 /*   By: giamrugg <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 18:36:01 by giamrugg          #+#    #+#             */
-/*   Updated: 2024/11/26 12:13:03 by giamrugg         ###   ########.fr       */
+/*   Updated: 2024/11/27 11:31:54 by giamrugg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_recursive_factorial(int nb)
 	}
 	if (nb == 0 || nb == 1)
 	{
-		return(1);
+		return (1);
 	}
 	return (nb * ft_recursive_factorial(nb - 1));
 }

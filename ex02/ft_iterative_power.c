@@ -6,7 +6,7 @@
 /*   By: giamrugg <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 12:15:18 by giamrugg          #+#    #+#             */
-/*   Updated: 2024/11/26 12:55:49 by giamrugg         ###   ########.fr       */
+/*   Updated: 2024/11/27 19:33:20 by giamrugg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,10 @@ int	ft_iterative_power(int nb, int power)
 	{
 		return (1);
 	}
-	for (b = 0; b < power; b++)
+	while (b < power)
 	{
 		a *= nb;
+		b++;
 	}
 	return (a);
 }
